@@ -13,6 +13,18 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // JSON 라이브러리
+    implementation('com.googlecode.json-simple:json-simple:1.1.1') {
+        exclude group: 'junit'   // 오래된 JUnit 4가 딸려오는 걸 막음
+    }
+    // Jackson과 Jdk8Module
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.2'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.17.2'
+
+    // 테스트 (JUnit 5)
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
 test {
