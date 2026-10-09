@@ -1,0 +1,12 @@
+// 00_json 모듈 전용 라이브러리 (공통 설정은 루트 build.gradle에 있음)
+
+dependencies {
+    // json-simple: 회사 코드에서 쓰는 JSON 라이브러리
+    implementation('com.googlecode.json-simple:json-simple:1.1.1') {
+        exclude group: 'junit'   // 잘못 선언된 JUnit 4 전이 의존성 제외
+    }
+
+    // Jackson + Jdk8Module (Optional 등 Java 8 타입 지원)
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.2'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.17.2'
+}
