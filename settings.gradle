@@ -2,3 +2,4 @@ rootProject.name = 'ASC'
 
 // 학습 주제별 모듈. 새 주제를 시작하면 여기에 한 줄 추가
 include '00_json'
+include '01_service-communication'

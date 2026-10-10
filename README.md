@@ -29,8 +29,8 @@ ASC/
 | 폴더 | 주제 | 상태 |
 |---|---|---|
 | 00_json | JSON과 Java 타입 (json-simple, Jackson, Jdk8Module) | 진행 중 |
-| 01_rdb | DB 설계 (모델링, 키, 인덱스, 트랜잭션) | 예정 |
-| 02_messaging | 서비스 연계 (HTTP 클라이언트, Kafka) | 예정 |
+| 01_service-communication | 서비스 간 통신 (WebClient Proxy, Kafka 이벤트) | 진행 중 |
+| 02_rdb | DB 설계 (모델링, 키, 인덱스, 트랜잭션) | 예정 |
 | 03_binary | 파일·바이너리 처리 (byte, Stream, Base64) | 예정 |
 
 ## 새 주제 추가하기

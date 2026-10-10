@@ -1,0 +1,20 @@
+// 01_service-communication: 서비스 간 통신 (동기 호출 → 이벤트)
+// 공통 설정(Java 21, JUnit 5)은 루트 build.gradle에 있음
+
+dependencies {
+    // Spring Boot BOM: 라이브러리 버전을 Spring Boot가 검증한 조합으로 맞춰 준다.
+    // 아래 의존성에 버전을 적지 않아도 되는 이유가 이 한 줄 (junit-bom과 같은 개념)
+    implementation platform('org.springframework.boot:spring-boot-dependencies:3.5.6')
+
+    // WebClient (Spring WebFlux) + Jackson
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+    // 테스트: JUnit 5, AssertJ, Mockito 묶음
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // Reactor 테스트 도구 (StepVerifier)
+    testImplementation 'io.projectreactor:reactor-test'
+    // 가짜 HTTP 서버: 상대 서비스의 응답(정상, 지연, 오류)을 테스트 안에서 만들어 낸다
+    // 주의: 4.x는 JUnit 4를 데려오고, 실제로 필요로 한다 (00_json처럼 exclude 하면 안 됨)
+    //       → @Test는 반드시 org.junit.jupiter.api.Test 를 import
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.12.0'
+}

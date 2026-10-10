@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/00_json" />
+            <option value="$PROJECT_DIR$/01_service-communication" />
           </set>
         </option>
       </GradleProjectSettings>
